@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>HackMIT 2020</title>
+    <!-- The default layout, resets and and text styling -->
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <!-- Custom styling -->
+    <link href="stylesheets/scroll.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="topnav">
+        <a class="active" href="reporting.html">Report an Incident</a>
+        <a href="index.html">Home</a>
+        <a href="resources.html">External Resource</a>
+    </div>
+    <header class="header show-on-scroll">
+      <h1 class="heading">Resources</h1>
+    </header>
+    <article style="padding: 50px;">
+      <section class="paragraph show-on-scroll">
+        <center>
+            <a href="http://www.phillythrive.org/">Philly Thrive</a>
+            <p>Philly Thrive is an organization dedicated to environmental justice to center the people and the planet.</p>
+
+            <a href="http://www.yasproject.com/">YASProject</a>
+            <p>The Youth Art & Self-Empowerment Project (YASP) is building a youth-led movement to end the practice of  trying and incarcerating young people as adults.</p>
+
+            <a href="https://amistadlaw.org/">Amistad Law</a>
+            <p >Amistad Law Project is a prison abolitionist human rights project moving against systemic oppression based in Philadelphia.</p>
+
+            <a href="https://sistersreturninghome.org/">Sisters Returning Home</a>
+            <p>Sisters Returning Home helps women returning from prison re-enter the community positively.</p>
+
+            <a href="https://www.phillybailfund.org/">Philly Bail Fund</a>
+            <p>Philly Bail Fund is dedicated to ending cash bail in the city of Philadelphia. </p>
+
+            <a href="https://www.phillystudentunion.com/help-continue-our-fight-for-police">Philly Student Union</a>
+            <p>The Philadelphia Student Union fights for students in the Philadelphia public school system to demand high quality education. Currently, they are working on a police free school campaign.</p>
+
+            <a href="https://raheem.org/">Raheem</a>
+            <p>Raheem is a project to help people self-report police violence nationally.</p>
+
+            <p><a href="http://blackandbrownworkerscoop.org/">Black and Brown Workers Scoop</a></p>
+
+            <p><a href="http://www.blmphilly.com/">BLM Philly</a></p>
+
+            <p><a href="https://www.phillybailout.com/">Philly Bailout</a></p>
+        </center>
+      </section>
+    </article>
+    <script src="javascripts/show-on-scroll.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script type = "text/javascript">
+      $(document).ready(function(){
+        //Take your div into one js variable
+        var div = $("#divToShowHide");
+        //Take the current position (vertical position from top) of your div in the variable
+        var pos = div.position();
+        //Now when scroll event trigger do following
+        $(window).scroll(function () {
+         var windowpos = $(window).scrollTop();
+         //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
+         // I am taking 100px scroll, you can take whatever you need
+         if (windowpos >= (pos.top - 100)) {
+           div.addClass("AfterScroll");
+         }
+         //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
+         else {
+           s.removeClass("AfterScroll");
+         }
+         //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
+       });
+      });
+      </script>
+  </body>
+</html>

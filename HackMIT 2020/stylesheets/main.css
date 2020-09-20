@@ -1,4 +1,3 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 body {
   margin: 0;
 }
@@ -105,9 +104,10 @@ h4, h5 {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
-p, li {
+p, li, a {
   font-size: 1.8rem;
   line-height: 1.5;
+  text-align: center;
 }
 a {
   font-weight: bold;
@@ -240,18 +240,10 @@ a {
   text-decoration: underline;
 }
 
-.content, .paragraph {
+.content {
   margin: 4em auto;
   max-width: 740px;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-
 }
 
 h2 {
@@ -286,7 +278,7 @@ header:after {
 
 .heading {
   color: #19292E;
-  font-size: 8em;
+  font-size: 5em;
     left: 50%;
   line-height: 1;
   margin: 0;
@@ -295,7 +287,6 @@ header:after {
     top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 5em;
   z-index: 10;
 } 
 
@@ -309,9 +300,9 @@ header:after {
           filter: blur(2px);
   height: 20em;
     left: calc(50% - 25em);
-  position: absolute;
     top: calc(50% - 25.5em);
   width: 20em;
+  vertical-align: middle;
 }
 
 .credit {
@@ -329,4 +320,32 @@ header:after {
   height: 100px;
   width: 100%; 
   display: block;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #798697;
+  color: white;
 }
